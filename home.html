@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dice Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div id="div1" class="main">
+        <div class="parent">
+            <div class="write">
+                <h1><span>Dice</span> Roller</h1>
+                <p>Let's see who can win!!!!</p>
+                <button onclick="fun1()"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <img src="image/dice.png">
+        </div>
+    </div>
+
+
+    <div id="div2" class="main2">
+        <div class="top">
+            <button onclick="fun2()"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div>
+            <img src="image/page.webp">
+        </div>
+        <div class="write2">
+            <div class="dd1">
+                <p><input oninput="funinp()" id="input1" type="text" placeholder="Enter Player 1 Name"></p>
+                <button id="b1" onclick="n1()" class="btn1">X</button>
+            </div>
+            <div class="dd1 dd2">
+                <p><input id="input2" oninput="funinp1()" type="text" placeholder="Enter Player 2 Name"></p>
+                <button id="b2" onclick="n2()" class="btn1">X</button>
+            </div>
+            <button id="start" onclick="fun3()">Start</button>
+        </div>
+    </div>
+
+
+    <div id="div3" class="main3">
+        <div class="top2">
+            <p id="pp1"></p>
+            <p id="pp2"></p>
+            <p id="result"></p>
+        </div>
+        <div class="diceimg">
+            <div><img id="image1" src="dice/dice1.png"></div>
+            <div><img id="image2" src="dice/dice1.png"></div>
+        </div>
+        <div class="btn">
+            <button id="ch1" onclick="ch()">Get Number</button>
+            <button id="roll1" onclick="roll()" disabled>Roll Dice</button>
+        </div>
+
+        <div class="last">
+            <h2>Chances Left</h2>
+            <button id="chance"></button>
+        </div>
+
+        <button id="end" onclick="end()">End</button>
+    </div>
+
+
+    <div id="main4">
+        <div id="win">
+            <img src="image/winner.png">
+            <div class="w1">
+                <p>Yayyyy!!!!!</p>
+                <h1 id="won"></h1>
+            </div>
+        </div>
+        <div class="final">
+            <button onclick="again()">Play Again</button>
+            <button onclick="exit()">Exit</button>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
